@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingColor", "DataBindingColor\DataBindingColor.csproj", "{6F955A55-6B8D-4768-AAE7-2BC8D4827B26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F955A55-6B8D-4768-AAE7-2BC8D4827B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F955A55-6B8D-4768-AAE7-2BC8D4827B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F955A55-6B8D-4768-AAE7-2BC8D4827B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F955A55-6B8D-4768-AAE7-2BC8D4827B26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F3DC4A4-4691-4F80-923C-D7BE135B127F}
+	EndGlobalSection
+EndGlobal
