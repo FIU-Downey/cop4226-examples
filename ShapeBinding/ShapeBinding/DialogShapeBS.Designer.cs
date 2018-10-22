@@ -54,6 +54,7 @@
             this.rTextBox = new System.Windows.Forms.TextBox();
             this.xTextBox = new System.Windows.Forms.TextBox();
             this.yTextBox = new System.Windows.Forms.TextBox();
+            this.buttonOK = new System.Windows.Forms.Button();
             bLabel = new System.Windows.Forms.Label();
             gLabel = new System.Windows.Forms.Label();
             rLabel = new System.Windows.Forms.Label();
@@ -282,11 +283,22 @@
             this.yTextBox.Size = new System.Drawing.Size(100, 20);
             this.yTextBox.TabIndex = 10;
             // 
+            // buttonOK
+            // 
+            this.buttonOK.Location = new System.Drawing.Point(571, 352);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.TabIndex = 11;
+            this.buttonOK.Text = "OK";
+            this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
+            // 
             // DialogShapeBS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonOK);
             this.Controls.Add(bLabel);
             this.Controls.Add(this.bTextBox);
             this.Controls.Add(gLabel);
@@ -330,5 +342,6 @@
         private System.Windows.Forms.TextBox rTextBox;
         private System.Windows.Forms.TextBox xTextBox;
         private System.Windows.Forms.TextBox yTextBox;
+        private System.Windows.Forms.Button buttonOK;
     }
 }

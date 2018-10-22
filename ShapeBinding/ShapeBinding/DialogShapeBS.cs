@@ -37,5 +37,12 @@ namespace ShapeBinding
                 Apply(this, EventArgs.Empty);
             }
         }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            shapeComponentBindingSource.EndEdit();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

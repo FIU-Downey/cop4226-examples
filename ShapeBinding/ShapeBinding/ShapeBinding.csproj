@@ -57,7 +57,14 @@
     <Compile Include="DialogShapeBS.Designer.cs">
       <DependentUpon>DialogShapeBS.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogShapeInstance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogShapeInstance.Designer.cs">
+      <DependentUpon>DialogShapeInstance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Document.cs" />
+    <Compile Include="DocumentComponent.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DialogShapeBS.resx">
       <DependentUpon>DialogShapeBS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogShapeInstance.resx">
+      <DependentUpon>DialogShapeInstance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
