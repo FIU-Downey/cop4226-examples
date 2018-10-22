@@ -22,5 +22,20 @@ namespace ShapeBinding
             get { return this.shapeComponentBindingSource;  }
             set { this.shapeComponentBindingSource = value; }
         }
+
+        private void bindingNavigatorPositionItem_Click(object sender, EventArgs e)
+        {
+ 
+        }
+
+        public event EventHandler Apply;
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+            if (Apply != null)
+            {
+                Apply(this, EventArgs.Empty);
+            }
+        }
     }
 }

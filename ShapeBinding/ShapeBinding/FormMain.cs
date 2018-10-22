@@ -25,12 +25,18 @@ namespace ShapeBinding
 
             dlg = new DialogShape();
             dlgBS = new DialogShapeBS();
+            dlgBS.Apply += DlgBS_Apply;
 
             //dlg.R.DataBindings.Add("Text", this.doc.Shapes, "R");
             //dlg.G.DataBindings.Add("Text", this.doc.Shapes, "G");
             //dlg.B.DataBindings.Add("Text", this.doc.Shapes, "B");
             //dlg.X.DataBindings.Add("Text", this.doc.Shapes, "X");
             //dlg.Y.DataBindings.Add("Text", this.doc.Shapes, "Y");
+        }
+
+        private void DlgBS_Apply(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
 
         private void FormMain_Paint(object sender, PaintEventArgs e)
