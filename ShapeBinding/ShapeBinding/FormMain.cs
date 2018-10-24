@@ -20,6 +20,7 @@ namespace ShapeBinding
         public FormMain()
         {
             InitializeComponent();
+
             doc = new Document();
             doc.Add(new Shape(Color.Red, new Point(10, 20)));
             doc.Add(new Shape(Color.Blue, new Point(100, 20)));
@@ -34,6 +35,7 @@ namespace ShapeBinding
             dlgBS = new DialogShapeBS();
             dlgBS.Apply += DlgBS_Apply;
             dlgInstance = new DialogShapeInstance();
+            dlgInstance.StartPosition = FormStartPosition.Manual;
 
             //dlg.R.DataBindings.Add("Text", this.doc.Shapes, "R");
             //dlg.G.DataBindings.Add("Text", this.doc.Shapes, "G");
@@ -110,12 +112,12 @@ namespace ShapeBinding
 
         }
 
-        private void buttonInstance_Click(object sender, EventArgs e)
+        private void ButtonInstance_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void tabPageComponent_MouseClick(object sender, MouseEventArgs e)
+        private void TabPageComponent_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
@@ -125,7 +127,19 @@ namespace ShapeBinding
             }
         }
 
-        private void tabPageInstance_MouseClick(object sender, MouseEventArgs e)
+        private void TabPageInstance_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                dlgInstance.DataSource = doc.Shapes;
+                dlgInstance.BindingManager.PositionChanged += BindingManager_PositionChanged;
+                dlgInstance.Location = new Point(this.Left + this.Width / 2, this.Top + this.Height / 2);
+                dlgInstance.ShowDialog();
+                this.tabControlChoice.Invalidate();
+            }
+        }
+
+        private void TabPageBindingSource_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
@@ -135,14 +149,39 @@ namespace ShapeBinding
             }
         }
 
-        private void tabPageInstance_Paint(object sender, PaintEventArgs e)
+        private void TabPageSimple_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                dlg.DataSource = docComp.Shapes[0];
+                dlg.ShowDialog();
+                this.tabControlChoice.Invalidate();
+            }
+        }
+
+        private void BindingManager_PositionChanged(object sender, EventArgs e)
+        {
+            this.tabControlChoice.Invalidate();
+        }
+
+        private void TabPageInstance_Paint(object sender, PaintEventArgs e)
+        {
+            doc.Paint(e.Graphics);
+        }
+
+        private void TabPageComponent_Paint(object sender, PaintEventArgs e)
         {
             docComp.Paint(e.Graphics);
         }
 
-        private void tabPageComponent_Paint(object sender, PaintEventArgs e)
+        private void TabPageBindingSource_Paint(object sender, PaintEventArgs e)
         {
             docComp.Paint(e.Graphics);
+        }
+
+        private void TabPageSimple_Paint(object sender, PaintEventArgs e)
+        {
+            docComp.Shapes[0].Paint(e.Graphics);
         }
     }
 }

@@ -41,14 +41,16 @@
             // 
             // groupBoxNan
             // 
+            this.groupBoxNan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxNan.Controls.Add(this.labelPosition);
             this.groupBoxNan.Controls.Add(this.buttonEnd);
             this.groupBoxNan.Controls.Add(this.buttonNext);
             this.groupBoxNan.Controls.Add(this.buttonPrev);
             this.groupBoxNan.Controls.Add(this.buttonStart);
-            this.groupBoxNan.Location = new System.Drawing.Point(40, 319);
+            this.groupBoxNan.Location = new System.Drawing.Point(40, 211);
             this.groupBoxNan.Name = "groupBoxNan";
-            this.groupBoxNan.Size = new System.Drawing.Size(718, 79);
+            this.groupBoxNan.Size = new System.Drawing.Size(614, 72);
             this.groupBoxNan.TabIndex = 12;
             this.groupBoxNan.TabStop = false;
             this.groupBoxNan.Text = "Navigation";
@@ -63,9 +65,10 @@
             // 
             // buttonEnd
             // 
-            this.buttonEnd.Location = new System.Drawing.Point(599, 32);
+            this.buttonEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEnd.Location = new System.Drawing.Point(483, 32);
             this.buttonEnd.Name = "buttonEnd";
-            this.buttonEnd.Size = new System.Drawing.Size(75, 23);
+            this.buttonEnd.Size = new System.Drawing.Size(75, 25);
             this.buttonEnd.TabIndex = 3;
             this.buttonEnd.Text = ">|";
             this.buttonEnd.UseVisualStyleBackColor = true;
@@ -73,9 +76,10 @@
             // 
             // buttonNext
             // 
-            this.buttonNext.Location = new System.Drawing.Point(473, 32);
+            this.buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonNext.Location = new System.Drawing.Point(357, 32);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext.Size = new System.Drawing.Size(75, 25);
             this.buttonNext.TabIndex = 2;
             this.buttonNext.Text = ">";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -85,7 +89,7 @@
             // 
             this.buttonPrev.Location = new System.Drawing.Point(155, 32);
             this.buttonPrev.Name = "buttonPrev";
-            this.buttonPrev.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrev.Size = new System.Drawing.Size(75, 25);
             this.buttonPrev.TabIndex = 1;
             this.buttonPrev.Text = "<";
             this.buttonPrev.UseVisualStyleBackColor = true;
@@ -95,7 +99,7 @@
             // 
             this.buttonStart.Location = new System.Drawing.Point(55, 32);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(75, 23);
+            this.buttonStart.Size = new System.Drawing.Size(75, 25);
             this.buttonStart.TabIndex = 0;
             this.buttonStart.Text = "|<";
             this.buttonStart.UseVisualStyleBackColor = true;
@@ -103,7 +107,7 @@
             // 
             // buttonColor
             // 
-            this.buttonColor.Location = new System.Drawing.Point(314, 169);
+            this.buttonColor.Location = new System.Drawing.Point(275, 105);
             this.buttonColor.Name = "buttonColor";
             this.buttonColor.Size = new System.Drawing.Size(75, 23);
             this.buttonColor.TabIndex = 13;
@@ -113,7 +117,8 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(683, 415);
+            this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOK.Location = new System.Drawing.Point(579, 298);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 14;
@@ -125,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(680, 339);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.buttonColor);
             this.Controls.Add(this.groupBoxNan);

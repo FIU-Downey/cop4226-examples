@@ -32,6 +32,8 @@
             this.tabControlChoice = new System.Windows.Forms.TabControl();
             this.tabPageComponent = new System.Windows.Forms.TabPage();
             this.tabPageInstance = new System.Windows.Forms.TabPage();
+            this.tabPageBindingSource = new System.Windows.Forms.TabPage();
+            this.tabPageSimple = new System.Windows.Forms.TabPage();
             this.tabControlChoice.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,12 +45,14 @@
             this.buttonInstance.TabIndex = 0;
             this.buttonInstance.Text = "Instance";
             this.buttonInstance.UseVisualStyleBackColor = true;
-            this.buttonInstance.Click += new System.EventHandler(this.buttonInstance_Click);
+            this.buttonInstance.Click += new System.EventHandler(this.ButtonInstance_Click);
             // 
             // tabControlChoice
             // 
             this.tabControlChoice.Controls.Add(this.tabPageComponent);
             this.tabControlChoice.Controls.Add(this.tabPageInstance);
+            this.tabControlChoice.Controls.Add(this.tabPageBindingSource);
+            this.tabControlChoice.Controls.Add(this.tabPageSimple);
             this.tabControlChoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlChoice.Location = new System.Drawing.Point(0, 0);
             this.tabControlChoice.Name = "tabControlChoice";
@@ -65,8 +69,8 @@
             this.tabPageComponent.TabIndex = 0;
             this.tabPageComponent.Text = "Component";
             this.tabPageComponent.UseVisualStyleBackColor = true;
-            this.tabPageComponent.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageComponent_Paint);
-            this.tabPageComponent.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPageComponent_MouseClick);
+            this.tabPageComponent.Paint += new System.Windows.Forms.PaintEventHandler(this.TabPageComponent_Paint);
+            this.tabPageComponent.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabPageComponent_MouseClick);
             // 
             // tabPageInstance
             // 
@@ -77,8 +81,32 @@
             this.tabPageInstance.TabIndex = 1;
             this.tabPageInstance.Text = "Instance";
             this.tabPageInstance.UseVisualStyleBackColor = true;
-            this.tabPageInstance.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageInstance_Paint);
-            this.tabPageInstance.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabPageInstance_MouseClick);
+            this.tabPageInstance.Paint += new System.Windows.Forms.PaintEventHandler(this.TabPageInstance_Paint);
+            this.tabPageInstance.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabPageInstance_MouseClick);
+            // 
+            // tabPageBindingSource
+            // 
+            this.tabPageBindingSource.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBindingSource.Name = "tabPageBindingSource";
+            this.tabPageBindingSource.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBindingSource.Size = new System.Drawing.Size(792, 424);
+            this.tabPageBindingSource.TabIndex = 2;
+            this.tabPageBindingSource.Text = "Binding Source";
+            this.tabPageBindingSource.UseVisualStyleBackColor = true;
+            this.tabPageBindingSource.Paint += new System.Windows.Forms.PaintEventHandler(this.TabPageBindingSource_Paint);
+            this.tabPageBindingSource.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabPageBindingSource_MouseClick);
+            // 
+            // tabPageSimple
+            // 
+            this.tabPageSimple.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSimple.Name = "tabPageSimple";
+            this.tabPageSimple.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSimple.Size = new System.Drawing.Size(792, 424);
+            this.tabPageSimple.TabIndex = 3;
+            this.tabPageSimple.Text = "Simple";
+            this.tabPageSimple.UseVisualStyleBackColor = true;
+            this.tabPageSimple.Paint += new System.Windows.Forms.PaintEventHandler(this.TabPageSimple_Paint);
+            this.tabPageSimple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabPageSimple_MouseClick);
             // 
             // FormMain
             // 
@@ -102,6 +130,8 @@
         private System.Windows.Forms.TabControl tabControlChoice;
         private System.Windows.Forms.TabPage tabPageComponent;
         private System.Windows.Forms.TabPage tabPageInstance;
+        private System.Windows.Forms.TabPage tabPageBindingSource;
+        private System.Windows.Forms.TabPage tabPageSimple;
     }
 }
 

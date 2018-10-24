@@ -33,7 +33,7 @@ namespace ShapeBinding
             }
         }
 
-        BindingManagerBase BindingManager
+        public BindingManagerBase BindingManager
         {
             get { return this.BindingContext[dataSource]; }
         }
@@ -43,7 +43,6 @@ namespace ShapeBinding
             this.BindingManager.Position = 0;
             RefreshItems();
         }
-
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
@@ -90,7 +89,8 @@ namespace ShapeBinding
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-
+            this.BindingManager.EndCurrentEdit();
+            this.Close();
         }
     }
 }
